@@ -3,7 +3,9 @@
 
 ### step 1
 
-``` git clone https://github.com/rahulsingh2312/learn-link.git ```
+```
+ git clone https://github.com/rahulsingh2312/learn-link.git 
+ ```
 
 
 ### step 2
