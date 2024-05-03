@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/61f7685f-47e5-49a0-b5cb-ca6b8cab4228/drok89-a7a2a550-ba87-40a6-9701-b635550d55b3.jpg");
+  background-position: center center;
+}
+.Hangman {
+  width: 400px;
+  color: black;
+  text-align: center;
+  zoom: 1.3;
+}
+
+.Hangman img {
+  border: 10px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.27),
+    0 0 40px rgba(0, 0, 0, 0.06) inset;
+}
+
+.Hangman h1 {
+  font-size: 4rem;
+  font-weight: 100;
+  margin-bottom: 0.1em;
+  margin-top: 0;
+}
+
+.Hangman-word {
+  letter-spacing: 1em;
+  margin: 0.4em -1em 0.2em 0;
+  font-size: 2rem;
+}
+
+.Hangman-btns {
+  text-align: center;
+  display: inline-block;
+  width: 250px;
+  margin-top: 0;
+}
+
+.Hangman button {
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 30px;
+  margin: 5px 2px 2px 2px;
+  letter-spacing: 1px;
+  outline: none;
+  background: #ffc107;
+  color: #fff;
+  box-shadow: 0 6px #ff9800;
+  border-radius: 5px;
+  padding-top: 4px;
+}
+
+#reset {
+  width: 60px;
+  background-color: green;
+}
+
+.Hangman button:hover {
+  background-color: #ff9800;
+}
+
+.Hangman button:disabled {
+  background: #bdbdbd;
+  color: #eeeeee;
+  box-shadow: 0 6px #9e9e9e;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+:root {
+  --color-tile: #7053d0;
+  --color-match: #fed5cd;
+  --color-shown: #641ff7;
+  --button-text-color: #7d1602;
+  --button-text-color-hover: #000000;
+  --color-button-hover: #fc8169;
+
+  --tile-border-size: 3px;
+  --column-count: 4;
+  --gap-size: 4vmin;
+  --board-size: 90vmin;
+}
+
+.App {
+  font-family: "creepster", sans-serif;
+  text-align: center;
+}
+
+.app-header {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.app-header h1 {
+  flex-grow: 1;
+  text-align: left;
+  color: var(--color-tile);
+  margin: 0;
+}
+
+.app-header label {
+  margin-right: 0.5rem;
+}
+
+.reset {
+  border: 0;
+  background: var(--color-match);
+  color: var(--button-text-color);
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  transition: background 0.25s ease-out, color 0.25s ease-out;
+  margin-left: 1rem;
+}
+.reset:hover {
+  background: var(--color-button-hover);
+  color: var(--button-text-color-hover);
+}
+.reset:focus {
+  outline: 2px dotted var(--color-tile);
+}
+
+.gameboard {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), 1fr);
+  grid-gap: var(--gap-size);
+  justify-items: center;
+  /* height: var(--board-size); */
+  width: var(--board-size);
+}
+.tile {
+  /* overflow: hidden; */
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--color-tile);
+  border-radius: 50%;
+  transition: filter, background 0.25s ease-out;
+  /* border: var(--tile-border-size) solid transparent; */
+}
+
+.tile.matched {
+  background: var(--color-match);
+}
+
+.tile.shown {
+  background: white;
+  border: solid var(--tile-border-size) var(--color-shown);
+}
+
+.tile button,
+.tile img {
+  display: block;
+}
+
+.tile button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: box-shadow 0.25s ease-out, filter 0.25s ease-out;
+}
+.tile button:hover {
+  filter: brightness(125%);
+}
+.tile button:focus {
+  box-shadow: 0 0 0 0.5rem white, 0 0 0 0.75rem var(--color-tile);
+}
+
+.tile img {
+  width: 70%;
+  height: 70%;
+  position: relative;
+  left: 15%;
+  top: 15%;
+}
+
+.tile button {
+  background: var(--color-tile);
+  overflow: hidden;
+  text-indent: -900%;
+}
+
+.tile.disabled {
+  filter: brightness(125%);
+}
+
+
+/* App.css */
+* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+} 
+
+.App { 
+	height: 100vh; 
+	width: 100vw; 
+	font-family: cursive; 
+	background-color: rgb(21, 56, 66); 
+} 
+
+/* CSS for GameBoard component */
+.container { 
+	display: flex; 
+	flex-direction: column; 
+} 
+
+.header { 
+	display: flex; 
+	flex-direction: row; 
+	padding: 10px; 
+  color: #000000;
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+} 
+
+h1 { 
+	align-self: start; 
+	font-size: 2.5rem; 
+	color: rgb(247, 247, 247); 
+
+} 
+.ball{
+  z-index: -10;
+  filter: blur(100px);
+
+}
+.text-grad{
+  /* text gradient from webkit */
+  background: linear-gradient(269deg, #29005C 29.96%, #6611D2 93.86%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+.text-stroke {
+  -webkit-text-stroke: 1px #000; /* WebKit browsers (Safari, Chrome) */
+  color: white; /* Set the text color */
+}
+.button { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	padding: 0.5rem 0.8rem; 
+	font-family: cursive; 
+	width: 200px; 
+	font-size: 1.2rem; 
+	font-weight: bolder; 
+	border-radius: 0.7rem; 
+	border-style: none; 
+	background-color: red; 
+	color: white; 
+	margin-top: 4px; 
+	margin-left: 55%; 
+} 
+
+.button:hover { 
+	border: 2px solid black; 
+	cursor: pointer; 
+} 
+
+
+
+.board { 
+	display: grid; 
+	margin: auto; 
+	margin-top: 3rem; 
+	grid-template-columns: repeat(4, 9rem); 
+	place-items: center; 
+	row-gap: 2rem; 
+} 
+
+.comments { 
+	padding: 0.25rem 1rem; 
+	background-color: white; 
+	margin: auto; 
+	margin-top: 40px; 
+	text-align: center; 
+	border-radius: 2rem; 
+} 
+
+/* CSS for Card component */
+.face { 
+	height: 6rem; 
+} 
+
+.back { 
+	height: 6rem; 
+	width: 6rem; 
+	background-color: rgb(253, 218, 175); 
+	color: rgb(61, 21, 21); 
+	border: 1px solid black; 
+	border-radius: 50%; 
+} 
+
+.item .face { 
+	position: absolute; 
+	transform: rotateY(90deg); 
+	transition: all ease-in 0.25s; 
+
+} 
+
+.toggled .face { 
+	transform: rotateY(0deg); 
+	transition-delay: 0.25s; 
+} 
+
+.item .back { 
+	transition: all ease-in 0.25s; 
+	transition-delay: 0.25s; 
+} 
+
+.toggled .back { 
+	transform: rotateY(90deg); 
+	transition-delay: 0s; 
+}
