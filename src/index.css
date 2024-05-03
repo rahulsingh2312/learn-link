@@ -252,7 +252,7 @@ h1 {
 
 } 
 .ball{
-  z-index: -10;
+  z-index: -1;
   filter: blur(100px);
 
 }
@@ -264,6 +264,28 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
+/* Add this to your index.css file */
+.Hangman-btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+
+  margin: 4px 2px 4px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.Hangman-btn:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+.Hangman-btn:focus {
+  outline: none;
+}
 
 .text-stroke {
   -webkit-text-stroke: 1px #000; /* WebKit browsers (Safari, Chrome) */
@@ -281,7 +303,8 @@ background-clip: text;
 	border-radius: 0.7rem; 
 	border-style: none; 
 	background-color: red; 
-	color: white; 
+	color: black; 
+
 	margin-top: 4px; 
 	margin-left: 55%; 
 } 

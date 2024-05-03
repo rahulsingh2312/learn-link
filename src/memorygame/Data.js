@@ -3,86 +3,86 @@
 const Data = [ 
 	{ 
 		id: 1, 
-		name: "react", 
+		name: "apple", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165802/atom-4.png", 
+"/apple.jpg", 
 		matched: false, 
 	}, 
 	{ 
 		id: 2, 
-		name: "java", 
+		name: "cat", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165803/java.png", 
+"/cat.jpeg", 
 		matched: false, 
 	}, 
 	{ 
 		id: 3, 
-		name: "css", 
+		name: "rat", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165803/css-3-1.png", 
+"/rat.jpg", 
 		matched: false, 
 	}, 
 	{ 
 		id: 4, 
-		name: "node", 
+		name: "feather", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165805/nodejs-1.png", 
+"/feather.png", 
 		matched: false, 
 	}, 
 	{ 
 		id: 5, 
-		name: "html", 
+		name: "reptile", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165806/html-5-1.png", 
+"/reptile.jpg", 
 		matched: false, 
 	}, 
 	{ 
 		id: 6, 
-		name: "js", 
+		name: "toy", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165804/js-3.png", 
+"/toy.jpg", 
 		matched: false, 
 	}, 
 	{ 
 		id: 7, 
-		name: "react", 
+		name: "apple", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165802/atom-4.png", 
+"/apple.jpg", 
 		matched: false, 
 	}, 
 	{ 
 		id: 8, 
-		name: "java", 
+		name: "cat", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165803/java.png", 
+"/cat.jpeg", 
 		matched: false, 
 	}, 
 	{ 
 		id: 9, 
-		name: "css", 
+		name: "rat", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165803/css-3-1.png", 
+"/rat.jpg", 
 		matched: false, 
 	}, 
 	{ 
 		id: 10, 
-		name: "node", 
+		name: "feather", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165805/nodejs-1.png", 
+"/feather.png", 
 		matched: false, 
 	}, 
 	{ 
 		id: 11, 
-		name: "html", 
+		name: "reptile", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165806/html-5-1.png", 
+"/reptile.jpg", 
 		matched: false, 
 	}, 
 	{ 
 		id: 12, 
-		name: "js", 
+		name: "toy", 
 		img: 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230927165804/js-3.png", 
+"/toy.jpg", 
 		matched: false, 
 	}, 
 ]; 

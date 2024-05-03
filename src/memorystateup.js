@@ -38,7 +38,7 @@ function App() {
     });
   }, []);
     return ( 
-        <div className=""> 
+        <div className=" "> 
          <div className="ball blur-3xl bg-purple-400/50 w-96 h-96 fixed top-0 left-0 rounded-full"></div>
 <div className="z-50">
             <GameBoard /> 

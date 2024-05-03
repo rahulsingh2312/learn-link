@@ -50,11 +50,11 @@ const QuizDetailsScreen = () => {
         <LogoContainer>
           {/* <AppLogo /> */}
         </LogoContainer>
-        <AppTitle>Slow Learner SAT TEST</AppTitle>
+        <AppTitle>WELCOME TO SAT TEST</AppTitle>
         <DetailTextContainer>
-          <DetailText>
+          {/* <DetailText>
             Selected Quiz Topic: <HighlightedText>{selectedQuizTopic}</HighlightedText>
-          </DetailText>
+          </DetailText> */}
           <DetailText>
             Total questions to attempt:{' '}
             <HighlightedText>{totalQuestions}</HighlightedText>

@@ -68,15 +68,15 @@ function GameBoard() {
   }
 
   return (
-    <div className="container">
+    <div className="container ">
       <motion.div
         className="text-center mt-10 text-6xl font-bold max-sm:text-4xl max-md:text-6xl"
         variants={textVariants}
         initial="hidden"
         animate="visible"
       >
-        Memory <span className="text-black italic font-normal">Game</span> <br /> slow{" "}
-        <span className="text-stroke">learners</span>
+         <span className="text-black italic font-normal mb-10"> Memory Game</span> <br /> {" "}
+        <span className="text-stroke"></span>
       </motion.div>
       <div className="text-sm text-center max-sm:text-xs text-white px-4 py-2 m-4 border border-gray-600 bg-black rounded-full w-fit mx-auto backdrop-blur-sm bg-opacity-90">
         Fitness Playground ⛹️‍♂️

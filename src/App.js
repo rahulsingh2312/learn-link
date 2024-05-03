@@ -10,7 +10,7 @@ export default function App(){
       <Routes>
       <Route path="/hangman"   element={<Hangman />} /> 
       <Route path="/memory"   element={<Memory />} /> 
-        <Route path="/" element={<Landingpage />} /> 
+     <Route path="/" element={<Landingpage />} /> 
       </Routes>
     </BrowserRouter>
   )
