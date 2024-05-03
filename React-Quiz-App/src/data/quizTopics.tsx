@@ -19,6 +19,18 @@ type QuizTopic = {
 export const quizTopics: QuizTopic[] = [
 
   {
+    title: 'React',
+    icon: <ReactIcon />,
+  },
+  {
+    title: 'JavaScript',
+    icon: <JavaScript />,
+  },
+  {
+    title: 'Python',
+    icon: <Python />,
+  },
+  {
     title: 'General Knowledge',
     icon: <BulbIcon />,
   },

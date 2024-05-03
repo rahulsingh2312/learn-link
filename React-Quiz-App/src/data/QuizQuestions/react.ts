@@ -4,181 +4,172 @@
 // 3. MAQs | Multiple Answers | multiple
 
 import { Topic } from '.'
-import BrandLogo from '../../assets/images/brand-logo.jpg';
-import Apple from '../../assets/images/apple.jpg';
-import Dish from '../../assets/images/dish.jpg';
-import Block from '../../assets/images/block.webp';
-import Finger from '../../assets/images/finger.jpg';
-import Feather from '../../assets/images/feather.png';
-import Cat from '../../assets/images/cat.jpeg';
-import Rat from '../../assets/images/rat.jpg';
-import Toy from '../../assets/images/toy.jpg';
-import Friend from '../../assets/images/friend.jpg';
-import Color from '../../assets/images/color.webp';
-import Floor from '../../assets/images/floor.webp';
-
+import CodeSnippet1 from '../../assets/images/code-snippet-1.png'
 
 export const react: Topic = {
-  topic: 'react',
-  level: 'Beginner',
-  totalQuestions: 20,
-  totalScore: 200,
-  totalTime: 20 * 60,
+  topic: 'React',
+  level: 'Intermediate',
+  totalQuestions: 11,
+  totalScore: 95,
+  totalTime: 600,
   questions: [
- 
     {
-      question: 'If I give you two candies and take away one, how many do you have left?',
-      choices: ['0', '1', '2', '3'],
+      question: 'What is JSX in React?',
+      choices: [
+        'A syntax extension for JavaScript that allows writing HTML-like code in JavaScript',
+        'A state management library for React applications',
+        'A build tool for bundling React applications',
+        'A testing framework for React components',
+      ],
       type: 'MCQs',
-      image: BrandLogo,
-      correctAnswers: ['2'],
+      correctAnswers: [
+        'A syntax extension for JavaScript that allows writing HTML-like code in JavaScript',
+      ],
       score: 10,
     },
     {
-      question: 'Which number comes between 3 and 5?',
-      choices: ['1', '2', '4', '6'],
+      question: 'React components must always return a single JSX element.',
+      choices: ['True', 'False'],
+      type: 'boolean',
+      correctAnswers: ['True'],
+      score: 5,
+    },
+    {
+      question: 'What is the purpose of React components?',
+      choices: [
+        'To handle HTTP requests and fetch data from APIs',
+        'To manage the state of a React application',
+        'To define the structure and appearance of the user interface',
+        'To handle user interactions and events',
+      ],
       type: 'MCQs',
-      image: Dish,
-      correctAnswers: ['4'],
+      correctAnswers: ['To define the structure and appearance of the user interface'],
       score: 10,
     },
     {
-      question: 'If you have three blue blocks and two red blocks, how many blocks do you have altogether?',
-      choices: ['3', '4', '5', '6'],
-      type: 'MCQs',
-      image: Block,
-      correctAnswers: ['5'],
+      question:
+        'Which of the following are valid React lifecycle methods? (Select all that apply)',
+      choices: [
+        'componentWillMount',
+        'componentDidMount',
+        'componentWillUpdate',
+        'componentDidUpdate',
+      ],
+      type: 'MAQs',
+      correctAnswers: ['componentDidMount', 'componentWillUpdate', 'componentDidUpdate'],
       score: 10,
     },
     {
-      question: 'How many fingers am I holding up?',
-      choices: ['0', '1', '2', '3'],
+      question: 'What will be the output of the following React code?',
+      code: `import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+};
+
+const App = () => {
+  return <Counter />;
+};
+
+export default App;`,
+      choices: ['Count: 0', 'Count: 1', 'Count: undefined', 'An error will occur'],
       type: 'MCQs',
-      image: Finger,
-      correctAnswers: ['2'],
+      correctAnswers: ['Count: 0'],
       score: 10,
     },
     {
-      question: 'Which object is heavier/lighter?',
-      choices: ['1kg feather', '1kg stone', 'same'],
+      question:
+        'In React, props are used to pass data from parent components to child components.',
+      choices: ['True', 'False'],
+      type: 'boolean',
+      correctAnswers: ['True'],
+      score: 5,
+    },
+    {
+      question: 'What is the output of the following code snippet?',
+      image: CodeSnippet1,
+      choices: ['0', '1', '2', 'undefined'],
       type: 'MCQs',
-      image: Feather,
-      correctAnswers: ['same'],
+      correctAnswers: ['0'],
       score: 10,
     },
     {
-      question: 'Which picture shows a cat?',
-      choices: ['🐶', '🐱', '🦆', '🐭'],
-      type: 'MCQs',
-      image: Cat,
-      correctAnswers: ['🐱'],
+      question:
+        'Which of the following are valid ways to conditionally render content in React? (Select all that apply)',
+      choices: [
+        'Using the if-else statement',
+        'Using the ternary operator',
+        'Using the switch statement',
+        'Using the && operator',
+      ],
+      type: 'MAQs',
+      correctAnswers: [
+        'Using the if-else statement',
+        'Using the ternary operator',
+        'Using the && operator',
+      ],
       score: 10,
     },
     {
-      question: 'Which word rhymes with "cat"?',
-      choices: ['Dog', 'Rat', 'Ball', 'Fish'],
+      question: 'In React, what is the purpose of keys in lists?',
+      choices: [
+        'To provide a unique identifier for each item in the list',
+        'To control the order of items in the list',
+        'To enable sorting and filtering of the list',
+        'To handle user interactions within the list',
+      ],
       type: 'MCQs',
-      image: Rat,
-      correctAnswers: ['Rat'],
+      correctAnswers: ['To provide a unique identifier for each item in the list'],
       score: 10,
     },
     {
-      question: 'What should you do if you spill water on the floor?',
-      choices: ['Leave it there.', 'Clean it up with a towel.', 'Ask someone else to clean it.', 'Walk away and ignore it.'],
+      question: 'What will be the result of the following React code?',
+      code: `import React from 'react';
+
+class Button extends React.Component {
+  handleClick() {
+    console.log('Button clicked');
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Click me</button>;
+  }
+}
+
+const App = () => {
+  return <Button />;
+};
+
+export default App;`,
+      choices: [
+        'The "Button clicked" message will be logged to the console when the button is clicked',
+        'The button will not respond to the click event',
+        'An error will occur due to the incorrect usage of onClick',
+        'The button will display but nothing will happen when clicked',
+      ],
       type: 'MCQs',
-      image: Floor,
-      correctAnswers: ['Clean it up with a towel.'],
+      correctAnswers: [
+        'The "Button clicked" message will be logged to the console when the button is clicked',
+      ],
       score: 10,
     },
     {
-      question: 'What should you say when you want to ask for a toy someone else is playing with?',
-      choices: ['"Give it to me now!"', '"Can I please have a turn with that?"', '"I\'m taking this!"', '"You can\'t play with that anymore!"'],
-      type: 'MCQs',
-      image: Toy,
-      correctAnswers: ['"Can I please have a turn with that?"'],
-      score: 10,
-    },
-    {
-      question: 'How can you help a friend who is feeling sad?',
-      choices: ['Ignore them.', 'Laugh at them.', 'Ask them what\'s wrong and try to cheer them up.', 'Tell them to stop being sad.'],
-      type: 'MCQs',
-      image : Friend,
-      correctAnswers: ['Ask them what\'s wrong and try to cheer them up.'],
-      score: 10,
-    },
-    {
-      question: 'What color is the sky during the daytime?',
-      choices: ['Red', 'Blue', 'Yellow', 'Green'],
-      type: 'MCQs',
-      image:Color ,
-      correctAnswers: ['Blue'],
-      score: 10,
-    },
-    {
-      question: 'What is one more than 5?',
-      choices: ['4', '6', '7', '8'],
-      type: 'MCQs',
-      image: Dish,
-      correctAnswers: ['6'],
-      score: 10,
-    },
-    {
-      question: 'Which animal lives in water?',
-      choices: ['Elephant', 'Giraffe', 'Fish', 'Lion'],
-      type: 'MCQs',
-      correctAnswers: ['Fish'],
-      score: 10,
-    },
-    {
-      question: 'What is the opposite of "hot"?',
-      choices: ['Cold', 'Warm', 'Spicy', 'Cool'],
-      type: 'MCQs',
-      correctAnswers: ['Cold'],
-      score: 10,
-    },
-    {
-      question: 'Which word means the same as "big"?',
-      choices: ['Small', 'Tiny', 'Large', 'Short'],
-      type: 'MCQs',
-      correctAnswers: ['Large'],
-      score: 10,
-    },
-    {
-      question: 'How can you cross a puddle of water without getting wet?',
-      choices: ['Jump over it.', 'Walk around it.', 'Use an umbrella.', 'Step on the stones or bricks.'],
-      type: 'MCQs',
-      correctAnswers: ['Step on the stones or bricks.'],
-      score: 10,
-    },
-    {
-      question: 'What do you say when you want to thank someone?',
-      choices: ['"Sorry"', '"Thank you"', '"Please"', '"Excuse me"'],
-      type: 'MCQs',
-      correctAnswers: ['"Thank you"'],
-      score: 10,
-    },
-    {
-      question: 'How do you greet someone you meet for the first time?',
-      choices: ['"Goodbye"', '"Thank you"', '"Hello" or "Hi"', '"Please"'],
-      type: 'MCQs',
-      correctAnswers: ['"Hello" or "Hi"'],
-      score: 10,
-    },
-    {
-      question: 'What is the color of grass?',
-      choices: ['Blue', 'Green', 'Yellow', 'Red'],
-      type: 'MCQs',
-      image: Color,
-      correctAnswers: ['Green'],
-      score: 10,
-    },
-    {
-      question: 'What letter does "apple" start with?',
-      choices: ['A', 'B', 'C', 'D'],
-      image:  Apple,
-      type: 'MCQs',
-      correctAnswers: ['A'],
-      score: 10,
+      question: 'React uses a virtual DOM to optimize rendering performance.',
+      choices: ['True', 'False'],
+      type: 'boolean',
+      correctAnswers: ['True'],
+      score: 5,
     },
   ],
 }
