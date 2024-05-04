@@ -92,7 +92,7 @@ const QuizTopicsScreen: React.FC = () => {
           {/* <AppLogo /> */}
         </LogoContainer>
         <Heading>
-          WELCOME TO <HighlightedText> Slow Learner SAT TEST</HighlightedText>
+          WELCOME TO <HighlightedText>  SAT TEST</HighlightedText>
         </Heading>
         <DetailText>Select topic below to start your Quiz.</DetailText>
         <SelectButtonContainer>
