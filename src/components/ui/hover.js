@@ -34,7 +34,7 @@ export default function HoverEffect  ()  {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="max-w-5xl -mt-72   md:ml-auto md:ml-52 absolute mx-auto px-8">
+    <div className="max-w-5xl -mt-72   md:ml-52 absolute px-8">
       <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10">
         {projects.map((project, idx) => (
           <div
