@@ -31,8 +31,8 @@ export function LampDemo() {
       </motion.h1>
     </LampContainer>
     {/* <Phone /> */}
-    <div className="flex">  <Tab />
-   <Hover /></div>
+      <Tab />
+   <Hover />
   
    
     
